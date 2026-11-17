@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="logo/vedha-mark.svg" type="image/svg+xml">
+<meta property="og:title" content="Vedha Associates | Builders in Chidambaram since 2010">
+<meta property="og:description" content="Multi-storied buildings, duplex houses and villas with amenities. Free site visit, itemised quote, stage-wise payment.">
+<meta property="og:image" content="img/hero-villa.jpg">
+<meta name="theme-color" content="#0B0B0C">
+<title>Vedha Associates</title>
+<meta name="description" content="Vedha Associates, Chidambaram, since 2010: builders of multi-storied buildings, duplex houses and villas with amenities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Tamil:wght@500;700&display=swap">
+<style>
+/* Layout: a black-and-gold luxury builder's portfolio. Full-bleed render hero, a "since 2010" statement, image-led home types, a live 3D model viewer, amenities over a dusk render, a gold-lit construction timeline, estimator, gallery, FAQ and a contact title block. Deliberately single dark theme. */
+:root{
+  color-scheme:dark;
+  --bg:#0B0B0C;          /* night black */
+  --surface:#131315;
+  --surface-2:#1A1A1D;
+  --ink:#F3EFE7;         /* warm white */
+  --muted:#A8A197;
+  --line:#2A2926;
+  --gold:#C8A15A;        /* brushed gold */
+  --gold-2:#E4C98C;      /* light gold */
+  --gold-ink:#0B0B0C;
+  --wa:#1F9E55;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --tamil:"Noto Sans Tamil","Latha","Nirmala UI",sans-serif;
+  --maxw:1240px;
+  --topbar-h:112px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:#000}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+::selection{background:var(--gold);color:var(--gold-ink)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.02}
+h2{font-size:clamp(2.2rem,4.8vw,3.7rem);font-weight:800;font-stretch:74%;text-transform:uppercase;letter-spacing:-.005em}
+h2 i,h1 i,.serif{font-family:var(--serif);font-style:italic;font-weight:600;text-transform:none;font-stretch:normal;color:var(--gold-2);letter-spacing:0}
+h3{font-size:1.3rem;font-weight:700;font-stretch:88%}
+p{margin:0}
+section{padding-block:clamp(72px,9vw,128px)}
+section[id]{scroll-margin-top:var(--topbar-h)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 56px;align-items:end;margin-bottom:52px}
+.sec-head p{color:var(--muted);max-width:54ch;font-size:1.06rem}
+.tag{color:var(--gold);display:inline-flex;align-items:center;gap:12px;margin-bottom:18px}
+.tag::before{content:"";width:28px;height:1px;background:var(--gold)}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+.alt{background:var(--surface)}
+.ph{border-bottom:1px dashed var(--gold)}
+.rep{position:absolute;left:12px;bottom:10px;font:500 .62rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(243,239,231,.8);background:rgba(11,11,12,.55);padding:3px 8px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 .95rem/1 var(--body);letter-spacing:.02em;padding:16px 24px;border:1px solid var(--gold);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;position:relative;overflow:hidden;transition:color .25s,border-color .25s;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.7,0,.2,1);z-index:-1}
+.btn:hover{color:var(--gold-ink)}
+.btn:hover::before{transform:scaleX(1);transform-origin:left}
+.btn.gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--gold-ink);border-color:var(--gold)}
+.btn.gold::before{background:var(--ink)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(4px)}
+
+/* ---------- Top bar ---------- */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:25}
+.locbar{background:#000;color:var(--ink);border-bottom:1px solid var(--line)}
+.locbar .wrap{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 14px;padding-block:8px;text-align:center;font-size:.85rem;line-height:1.4}
+.locbar svg{width:14px;height:14px;flex:none;color:var(--gold)}
+.locbar .addr{display:inline-flex;align-items:center;gap:7px}
+.locbar .sep{color:var(--gold);opacity:.6}
+.locbar a{color:var(--gold-2);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+.site-head{background:rgba(11,11,12,.82);backdrop-filter:saturate(1.3) blur(14px);-webkit-backdrop-filter:saturate(1.3) blur(14px);border-bottom:1px solid var(--line);position:relative}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand-mark{width:44px;height:44px;flex:none;transition:transform .4s}
+.brand:hover .brand-mark{transform:translateY(-2px)}
+.brand b{display:block;font-family:var(--display);font-weight:900;font-stretch:96%;font-size:1.3rem;letter-spacing:.1em;text-transform:uppercase;line-height:1;white-space:nowrap}
+.brand b em,.foot b.name em{font-style:normal;color:var(--gold-2)}
+.brand small{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-top:4px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:500;font-size:.93rem;position:relative;padding-block:6px;color:var(--muted);transition:color .2s}
+.nav ul a:hover,.nav ul a.active{color:var(--ink)}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav ul a:hover::after,.nav ul a.active::after{transform:scaleX(1)}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-cta .btn{padding:13px 18px}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;place-items:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+.mmenu{border-top:1px solid var(--line);background:var(--bg)}
+.mmenu ul{list-style:none;margin:0;padding:8px 0 16px;display:grid}
+.mmenu a{display:flex;justify-content:space-between;padding:15px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--display);font-stretch:85%;font-weight:700;text-transform:uppercase;font-size:1.1rem}
+.mmenu a span{color:var(--gold)}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2));transform-origin:left;transform:scaleX(0)}
+@media (max-width:1040px){.nav ul{display:none}.burger{display:grid}}
+@media (max-width:560px){.nav-cta .btn{display:none}.brand b{font-size:1rem;letter-spacing:.06em}.brand-mark{width:38px;height:38px}.locbar .wrap{font-size:.78rem}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:min(80vh,780px);display:flex;align-items:flex-end;padding:0;overflow:hidden;background:#000}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;animation:kb 24s ease-out both}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,.92) 0%,rgba(11,11,12,.6) 45%,rgba(11,11,12,.1) 75%),linear-gradient(0deg,rgba(11,11,12,1) 0%,rgba(11,11,12,0) 40%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-block:clamp(64px,10vw,140px) 40px}
+.hero h1{font-size:clamp(3.2rem,8.4vw,7.4rem);font-weight:900;font-stretch:64%;text-transform:uppercase;line-height:.86;max-width:12ch}
+.hero h1 i{display:block;font-size:.62em;line-height:1.05;margin-top:.12em}
+.hero .ta{font-family:var(--tamil);font-weight:700;font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--gold-2);margin-top:24px}
+.hero .lede{font-size:1.12rem;color:#D3CDC2;max-width:50ch;margin-top:12px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .rep{left:auto;right:16px;bottom:16px;z-index:1}
+.hstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:56px;border:1px solid rgba(200,161,90,.35);background:rgba(11,11,12,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);max-width:880px}
+.hstats div{padding:18px 20px}
+.hstats div+div{border-left:1px solid rgba(200,161,90,.25)}
+.hstats b{display:block;font-family:var(--display);font-weight:800;font-stretch:70%;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1;color:var(--gold-2);font-variant-numeric:tabular-nums}
+.hstats span{color:var(--muted);font-size:.68rem}
+@media (max-width:720px){.hstats{grid-template-columns:repeat(2,minmax(0,1fr))}.hstats div:nth-child(3){border-left:0}.hstats div:nth-child(n+3){border-top:1px solid rgba(200,161,90,.25)}}
+
+/* Ticker */
+.ticker{background:linear-gradient(90deg,var(--gold),var(--gold-2),var(--gold));color:var(--gold-ink);overflow:hidden}
+.ticker-track{display:flex;width:max-content;animation:tick 40s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker ul{display:flex;list-style:none;margin:0;padding:14px 0}
+.ticker li{display:flex;align-items:center;gap:24px;padding-right:24px;font-family:var(--display);font-weight:800;font-stretch:80%;text-transform:uppercase;font-size:1rem;letter-spacing:.06em;white-space:nowrap}
+.ticker li::after{content:"✦";font-size:.8rem}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.since{font-family:var(--display);font-weight:900;font-stretch:62%;font-size:clamp(7rem,18vw,14rem);line-height:.8;background:linear-gradient(180deg,var(--gold-2),var(--gold) 60%,#7d6230);-webkit-background-clip:text;background-clip:text;color:transparent}
+.about .lead{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.5rem,2.6vw,2.05rem);line-height:1.3;color:var(--ink);margin-top:18px}
+.about p.body{color:var(--muted);margin-top:18px;max-width:58ch}
+.collage{position:relative;aspect-ratio:5/4;max-width:100%}
+.collage figure{position:absolute;margin:0;overflow:hidden;border:1px solid var(--line)}
+.collage figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.collage figure:hover img{transform:scale(1.05)}
+.collage .a{inset:0 22% 18% 0}
+.collage .b{inset:42% 0 0 38%;box-shadow:0 30px 60px -20px #000;border-color:var(--gold)}
+.collage .badge{position:absolute;left:4%;bottom:2%;z-index:2;background:var(--gold);color:var(--gold-ink);padding:14px 18px;font-family:var(--display);font-weight:800;font-stretch:78%;text-transform:uppercase;line-height:1.05}
+.collage .badge b{display:block;font-size:2rem}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* ---------- Home types ---------- */
+.homes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.home{position:relative;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+.home:hover{border-color:var(--gold);transform:translateY(-6px)}
+.home .pic{position:relative;overflow:hidden;aspect-ratio:4/3}
+.home .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.home:hover .pic img{transform:scale(1.07)}
+.home .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,12,.85),transparent 55%)}
+.home .num{position:absolute;top:14px;left:16px;z-index:1;font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--gold-2)}
+.home .pic h3{position:absolute;left:18px;right:18px;bottom:14px;z-index:1;font-size:clamp(1.5rem,2.4vw,1.9rem);text-transform:uppercase;font-stretch:76%;font-weight:800}
+.home .pic .rep{left:auto;right:10px;top:10px;bottom:auto;z-index:1}
+.home .body{padding:20px;display:grid;gap:14px;align-content:start;flex:1}
+.home .for{color:var(--muted);font-size:.95rem}
+.home dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin:0;font-size:.88rem;border-top:1px solid var(--line);padding-top:14px}
+.home dt{color:var(--gold);font:500 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.home dd{margin:0}
+.home .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.home .acts .btn{padding:12px 16px;font-size:.88rem}
+@media (max-width:980px){.homes{grid-template-columns:1fr}.home .pic{aspect-ratio:16/9}}
+
+/* ---------- 3D viewer ---------- */
+.v3d{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);border:1px solid var(--line);background:var(--surface)}
+.v3d-stage{position:relative;min-height:380px;aspect-ratio:16/11;background:radial-gradient(90% 80% at 50% 30%,#2a2620,#0f0f10 70%);touch-action:pan-y;cursor:grab;overflow:hidden}
+.v3d-stage.dusk{background:radial-gradient(90% 80% at 50% 30%,#1b2233,#07080c 70%)}
+.v3d-stage:active{cursor:grabbing}
+.v3d-stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.v3d-stage .fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.v3d-hint{position:absolute;left:14px;bottom:12px;display:flex;align-items:center;gap:8px;color:var(--muted);font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
+.v3d-hint svg{width:18px;height:18px;color:var(--gold)}
+.v3d-tools{position:absolute;right:12px;top:12px;display:flex;gap:6px}
+.v3d-tools button{font:500 .74rem var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;background:rgba(11,11,12,.7);color:var(--ink);border:1px solid var(--line);cursor:pointer}
+.v3d-tools button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold-2)}
+.v3d-side{padding:clamp(22px,3vw,34px);display:grid;gap:18px;align-content:start;border-left:1px solid var(--line)}
+.tabs{display:grid;gap:8px}
+.tabs button{display:flex;align-items:center;justify-content:space-between;gap:10px;font:600 1rem var(--body);padding:15px 16px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;text-align:left;transition:border-color .2s,background .2s}
+.tabs button:hover{border-color:var(--gold)}
+.tabs button[aria-selected="true"]{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--gold-ink);border-color:var(--gold)}
+.tabs button .k{font:500 .7rem var(--mono);opacity:.75}
+.v3d-side .incl{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.v3d-side .incl li{display:flex;gap:10px;font-size:.95rem}
+.v3d-side .incl li::before{content:"✦";color:var(--gold);font-size:.75rem;padding-top:3px}
+@media (max-width:900px){.v3d{grid-template-columns:1fr}.v3d-side{border-left:0;border-top:1px solid var(--line)}.tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.tabs button{flex-direction:column;align-items:flex-start;padding:12px;font-size:.9rem}}
+
+/* ---------- Amenities ---------- */
+.amen-band{position:relative;overflow:hidden}
+.amen-band .bgimg{position:absolute;inset:0}
+.amen-band .bgimg img{width:100%;height:100%;object-fit:cover}
+.amen-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.93),rgba(11,11,12,.78) 50%,rgba(11,11,12,.95))}
+.amen-band>.wrap{position:relative;z-index:1}
+.amen-band .rep{z-index:1;left:auto;right:16px;bottom:14px}
+.amen{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.am{padding:22px 18px;border:1px solid rgba(200,161,90,.22);background:rgba(19,19,21,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;gap:12px;align-content:start;transition:border-color .3s,background .3s,transform .3s}
+.am:hover{border-color:var(--gold);background:rgba(200,161,90,.08);transform:translateY(-4px)}
+.am svg{width:34px;height:34px;color:var(--gold)}
+.am b{font-weight:600;line-height:1.3}
+.am span{color:var(--muted);font-size:.85rem;line-height:1.45}
+@media (max-width:1040px){.amen{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.amen{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.more{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:40px}
+.svc{border-top:1px solid var(--gold);padding-top:16px;display:grid;gap:8px;align-content:start}
+.svc p{color:var(--muted);font-size:.92rem}
+@media (max-width:1000px){.more{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.more{grid-template-columns:1fr}}
+
+/* ---------- Process ---------- */
+.proc{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,72px);align-items:start}
+.proc-img{position:sticky;top:calc(var(--topbar-h) + 16px);overflow:hidden;border:1px solid var(--line)}
+.proc-img img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.proc-img .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 20px 18px;background:linear-gradient(0deg,rgba(11,11,12,.95),transparent)}
+.proc-img .cap b{display:block;font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.5rem;color:var(--gold-2)}
+.proc-img .cap span{color:var(--muted);font-size:.9rem}
+.proc-img .rep{bottom:auto;top:10px}
+.timeline{position:relative;display:grid;gap:0}
+.timeline::before,.tl-fill{content:"";position:absolute;left:27px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl-fill{background:linear-gradient(180deg,var(--gold-2),var(--gold));transform-origin:top;transform:scaleY(0)}
+.step{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);column-gap:22px;padding-bottom:34px}
+.step:last-child{padding-bottom:0}
+.step .dot{grid-row:span 3;width:56px;height:56px;display:grid;place-items:center;background:var(--bg);border:1px solid var(--line);font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.5rem;color:var(--muted);position:relative;z-index:1;transition:all .4s}
+.step.on .dot{border-color:var(--gold);color:var(--gold-ink);background:linear-gradient(135deg,var(--gold-2),var(--gold));box-shadow:0 0 0 6px rgba(200,161,90,.12)}
+.step h3{margin-top:6px;font-size:1.2rem}
+.step p{color:var(--muted);font-size:.95rem;margin-top:4px}
+.step .mono{color:var(--gold);font-size:.66rem;margin-top:6px}
+@media (max-width:900px){.proc{grid-template-columns:1fr}.proc-img{position:relative;top:0}.proc-img img{aspect-ratio:16/10}}
+
+/* ---------- Estimator ---------- */
+.estimator{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:1px solid var(--line)}
+.est-in{padding:clamp(22px,3vw,36px);display:grid;gap:26px;background:var(--surface)}
+.est-out{padding:clamp(22px,3vw,36px);background:radial-gradient(120% 100% at 100% 0%,#2a2214,#0f0e0c 70%);display:flex;flex-direction:column;gap:16px;border-left:1px solid var(--gold)}
+.est-out .mono{color:var(--muted)}
+.field>label,.field>.lbl{display:block;font-weight:600;margin-bottom:10px}
+.field .hint{color:var(--muted);font-size:.85rem;margin-top:6px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{margin:0;font-weight:500;padding:11px 15px;border:1px solid var(--line);cursor:pointer;background:var(--bg);transition:border-color .2s}
+.seg label:hover{border-color:var(--gold)}
+.seg input:checked+label{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--gold-ink);border-color:var(--gold)}
+.seg input:focus-visible+label{outline:2px solid var(--gold);outline-offset:2px}
+input[type=number],input[type=text],input[type=tel],select,textarea{width:100%;font:inherit;padding:14px 15px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(200,161,90,.22)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+.area-row{display:flex;gap:12px;align-items:center}
+.area-row input[type=number]{width:130px;flex:none;font-variant-numeric:tabular-nums}
+.est-out .big{font-family:var(--display);font-weight:900;font-stretch:66%;font-size:clamp(2.8rem,6vw,4.4rem);line-height:1;font-variant-numeric:tabular-nums;background:linear-gradient(180deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bars{display:grid;gap:11px}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;font-size:.9rem}
+.bar .amt{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--gold-2)}
+.bar .track{grid-column:1/-1;height:4px;background:rgba(243,239,231,.1)}
+.bar .track i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2));transition:width .5s}
+.est-out .note{font-size:.82rem;color:var(--muted)}
+.est-out .btn{align-self:flex-start}
+@media (max-width:860px){.estimator{grid-template-columns:1fr}.est-out{border-left:0;border-top:1px solid var(--gold)}}
+
+/* ---------- Why ---------- */
+.why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.why>div{padding:30px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;gap:12px;align-content:start;position:relative;transition:background .3s}
+.why>div:hover{background:var(--surface)}
+.why>div::before{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:var(--gold);transition:width .4s}
+.why>div:hover::before{width:100%}
+.why svg{width:32px;height:32px;color:var(--gold)}
+.why p{color:var(--muted);font-size:.94rem}
+@media (max-width:980px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.why{grid-template-columns:1fr}}
+
+/* ---------- Gallery ---------- */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:14px}
+.ph-card{margin:0;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .3s}
+.ph-card:hover{border-color:var(--gold)}
+.ph-card button.open{all:unset;cursor:zoom-in;display:block;overflow:hidden}
+.ph-card button.open:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.ph-card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--bg);transition:transform .6s}
+.ph-card:hover img{transform:scale(1.05)}
+.ph-card figcaption{padding:10px 12px;display:grid;gap:2px;font-size:.9rem}
+.ph-card figcaption .mono{color:var(--gold);font-size:.62rem}
+.ph-card .del{position:absolute;top:8px;right:8px;font:500 .72rem var(--mono);background:var(--bg);color:var(--ink);border:1px solid var(--line);padding:4px 8px;cursor:pointer}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.filters button{font:500 .88rem var(--body);padding:10px 16px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.filters button:hover{border-color:var(--gold)}
+.filters button[aria-pressed="true"]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.empty{border:1px dashed var(--line);padding:48px 24px;text-align:center;color:var(--muted)}
+.empty b{display:block;color:var(--ink);font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.6rem;margin-bottom:6px}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:48px}
+.faq-list{border-top:1px solid var(--gold)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:22px 0;font-weight:600;font-size:1.08rem;transition:color .2s}
+.faq summary:hover{color:var(--gold-2)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 1.8rem/1 var(--body);color:var(--gold);transition:transform .25s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);padding:0 0 24px;max-width:62ch}
+.faq aside{display:grid;gap:16px;align-content:start}
+.faq aside p{color:var(--muted)}
+@media (max-width:860px){.faq{grid-template-columns:1fr}}
+
+/* ---------- CTA + Contact ---------- */
+.cta-band{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--gold-2),var(--gold) 55%,#9b7a3c);color:var(--gold-ink);padding-block:clamp(52px,6vw,84px)}
+.cta-band::before{content:"VEDHA";position:absolute;right:-2%;top:50%;transform:translateY(-50%);font-family:var(--display);font-weight:900;font-stretch:62%;font-size:clamp(8rem,22vw,18rem);line-height:1;color:rgba(11,11,12,.07);pointer-events:none}
+.cta-band .wrap{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+.cta-band h2 i{color:var(--gold-ink)}
+.cta-band p{margin-top:10px;font-weight:500}
+.cta-band .btn{border-color:var(--gold-ink);color:var(--gold-ink)}
+.cta-band .btn::before{background:var(--gold-ink)}
+.cta-band .btn:hover{color:var(--gold-2)}
+.cta-band .btn.dark{background:var(--gold-ink);color:var(--gold-2)}
+.cta-band .btn.dark::before{background:var(--ink)}
+.cta-band .btn.dark:hover{color:var(--gold-ink)}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);border:1px solid var(--line);background:var(--surface)}
+.tblock{display:grid;border-right:1px solid var(--line);align-content:start}
+.tblock div{padding:17px 24px;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.tblock div:last-child{border-bottom:0}
+.tblock .mono{color:var(--gold);font-size:.66rem}
+.tblock strong{font-size:1.08rem;font-weight:600}
+.tblock strong.sel{user-select:all}
+.copy{justify-self:start;font:500 .74rem var(--mono);background:none;border:1px solid var(--line);color:var(--ink);padding:5px 10px;cursor:pointer;text-decoration:none}
+.copy:hover{border-color:var(--gold);color:var(--gold-2)}
+form{padding:clamp(22px,3vw,34px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .full{grid-column:1/-1}
+form label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px}
+form h3{grid-column:1/-1;font-family:var(--serif);font-style:italic;font-weight:600;font-size:2rem;color:var(--gold-2)}
+.ok{grid-column:1/-1;border:1px solid var(--gold);padding:14px 16px;background:var(--bg);display:grid;gap:10px}
+.wa-inline{background:var(--wa);border-color:var(--wa);color:#fff;justify-self:start}
+@media (max-width:860px){.contact{grid-template-columns:1fr}.tblock{border-right:0;border-bottom:1px solid var(--line)}form{grid-template-columns:1fr}}
+
+/* ---------- Footer ---------- */
+footer{background:#000;color:var(--muted);padding-block:64px 28px;border-top:1px solid var(--gold)}
+.foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px}
+.foot b.name{font-family:var(--display);font-weight:900;font-stretch:96%;font-size:1.5rem;text-transform:uppercase;color:var(--ink);display:block;letter-spacing:.1em}
+.foot h4{font:500 .7rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{text-decoration:none;color:var(--ink)}
+.foot a:hover{color:var(--gold-2)}
+.foot .ta{font-family:var(--tamil);color:var(--gold-2);margin-top:12px}
+.credits{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:.75rem;line-height:1.6}
+.credits a{color:var(--muted);text-decoration:underline}
+.foot-bottom{margin-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot{grid-template-columns:1fr}}
+
+/* ---------- Fixed UI ---------- */
+.side-tab{position:fixed;right:0;top:42%;z-index:20;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;gap:10px;padding:18px 12px;padding-left:calc(12px + env(safe-area-inset-right,0px));background:linear-gradient(180deg,var(--gold-2),var(--gold));color:var(--gold-ink);border:0;font:700 .8rem var(--body);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:-6px 6px 20px rgba(0,0,0,.5)}
+.side-tab svg{transform:rotate(90deg)}
+.drawer-bg{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.6)}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:31;width:min(420px,100%);background:var(--surface);border-left:1px solid var(--gold);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.drawer .dhead{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.drawer .dhead h3{font-size:1.4rem;text-transform:uppercase;font-stretch:78%;font-weight:800}
+.x{font:400 1.4rem/1 var(--body);background:none;border:1px solid var(--line);color:var(--ink);width:38px;height:38px;cursor:pointer}
+.drawer-body{padding:22px;display:grid;gap:18px;overflow-y:auto}
+.drop{border:1px dashed var(--gold);padding:28px 16px;text-align:center;background:var(--bg);cursor:pointer;display:grid;gap:6px;justify-items:center}
+.drop.over{background:rgba(200,161,90,.1)}
+.drop svg{color:var(--gold)}
+.drop b{font-family:var(--display);font-stretch:85%;font-size:1.1rem}
+.drop span{color:var(--muted);font-size:.85rem}
+.queue{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.queue img{width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--line)}
+.drawer label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px}
+.status{font-size:.9rem;padding:10px 12px;border:1px solid var(--line);background:var(--bg)}
+.status.err{border-color:#E5766E;color:#F2A49E}
+.lightbox{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.94);display:grid;place-items:center;padding:24px;cursor:zoom-out}
+.lightbox img{max-width:100%;max-height:82vh;object-fit:contain}
+.lightbox p{color:var(--ink);margin-top:12px;text-align:center}
+.wa{position:fixed;z-index:19;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:10px;padding:13px 20px 13px 15px;background:var(--wa);color:#fff;text-decoration:none;font:600 .95rem var(--body);border-radius:40px;box-shadow:0 10px 30px -8px rgba(0,0,0,.7);transition:transform .2s}
+.wa:hover{transform:translateY(-3px)}
+.wa svg{width:26px;height:26px;flex:none}
+.wa::before{content:"";position:absolute;inset:-3px;border:2px solid var(--wa);border-radius:40px;animation:ping 2.4s ease-out infinite;pointer-events:none}
+@keyframes ping{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(1.2)}}
+.mbar{display:none}
+@media (max-width:720px){
+  .wa{display:none}
+  .mbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:22;background:#000;border-top:1px solid var(--gold);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+  .mbar a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px;text-decoration:none;font-weight:600;font-size:.78rem}
+  .mbar a+a{border-left:1px solid var(--line)}
+  .mbar svg{width:22px;height:22px}
+  .mbar .w{background:var(--wa);color:#fff}
+  .mbar .v{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--gold-ink)}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  .side-tab{top:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
+.rv.in{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(26px);opacity:.2}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before{animation:none!important;transition:none!important}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F0D9A2"/><stop offset=".55" stop-color="#C8A15A"/><stop offset="1" stop-color="#9B7A3C"/></linearGradient><symbol id="vmark" viewBox="0 0 64 64"><g fill="none" stroke="url(#vg)" stroke-width="4.2" stroke-linejoin="miter" stroke-linecap="square"><path d="M9 26 L32 9 L55 26"/><path d="M16 31 L32 55 L48 31"/></g><rect x="29" y="31" width="6" height="9" fill="url(#vg)"/></symbol></defs></svg>
+<!-- ============ STICKY TOP ============ -->
+<div class="topbar" id="topbar">
+  <div class="locbar" role="note" aria-label="Our location">
+    <div class="wrap">
+      <span class="addr"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-4.6 5-8.6A5 5 0 0 0 3 6.4C3 10.4 8 15 8 15z" fill="currentColor"/><circle cx="8" cy="6.4" r="1.8" fill="#000"/></svg>Annamalai Nagar, Chidambaram, Tamil Nadu 608002</span>
+      <span class="sep" aria-hidden="true">✦</span>
+      <span class="hrs">Mon – Sat, 9:00 am – 6:30 pm</span>
+      <span class="sep" aria-hidden="true">✦</span>
+      <a href="https://maps.app.goo.gl/5K7LoGXSuCG29k8r9" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+  <div class="site-head">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="brand" href="#top" aria-label="Vedha Associates home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#vmark"/></svg>
+        <span><b>Vedha <em>Associates</em></b><small>Builders · Chidambaram</small></span>
+      </a>
+      <ul id="navlinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#homes">Homes</a></li>
+        <li><a href="#view3d">3D view</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#estimate">Estimate</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn gold" href="#contact">Free site visit</a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><span></span></button>
+      </div>
+    </nav>
+    <div class="mmenu" id="mmenu" hidden>
+      <ul class="wrap">
+        <li><a href="#about">About us <span>→</span></a></li>
+        <li><a href="#homes">Homes we build <span>→</span></a></li>
+        <li><a href="#view3d">3D view <span>→</span></a></li>
+        <li><a href="#amenities">Villa amenities <span>→</span></a></li>
+        <li><a href="#process">How we build <span>→</span></a></li>
+        <li><a href="#estimate">Cost estimate <span>→</span></a></li>
+        <li><a href="#gallery">Gallery <span>→</span></a></li>
+        <li><a href="#faq">FAQ <span>→</span></a></li>
+        <li><a href="#contact">Contact <span>→</span></a></li>
+      </ul>
+    </div>
+    <div class="progress" id="progress"></div>
+  </div>
+</div>
+
+<main id="top">
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-img"><img src="img/hero-villa.jpg" alt="Modern two-storey luxury villa with glass walls and a pool at dusk"></div>
+  <div class="wrap">
+    <span class="mono tag">Builders in Chidambaram · Since 2010</span>
+    <h1 id="hero-h">Homes built to last <i>for generations.</i></h1>
+    <p class="ta" lang="ta">உங்கள் கனவு இல்லம், எங்கள் பொறுப்பு</p>
+    <p class="lede">Multi-storied buildings, duplex houses and villas with modern amenities, designed, built and handed over by Vedha Associates.</p>
+    <div class="ctas">
+      <a class="btn gold" href="#contact">Book a free site visit <span class="arr">→</span></a>
+      <a class="btn" href="#view3d">Explore in 3D</a>
+    </div>
+    <div class="hstats" aria-label="Vedha Associates at a glance">
+      <div><b><span data-count="16">16</span>+</b><span class="mono">Years experience</span></div>
+      <div><b><span class="ph"><span data-count="120">120</span>+</span></b><span class="mono">Homes handed over</span></div>
+      <div><b>3</b><span class="mono">Specialities</span></div>
+      <div><b>1</b><span class="mono">Engineer, start to finish</span></div>
+    </div>
+  </div>
+  <span class="rep">Representative 3D render</span>
+</section>
+
+<div class="ticker" aria-label="What we offer">
+  <div class="ticker-track">
+    <ul><li>Multi-storied buildings</li><li>Duplex houses</li><li>Villas with amenities</li><li>Free site visit</li><li>Itemised BOQ quote</li><li>Stage-wise payment</li><li>Plan approval support</li><li>Turnkey handover</li></ul>
+    <ul aria-hidden="true"><li>Multi-storied buildings</li><li>Duplex houses</li><li>Villas with amenities</li><li>Free site visit</li><li>Itemised BOQ quote</li><li>Stage-wise payment</li><li>Plan approval support</li><li>Turnkey handover</li></ul>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about">
+    <div class="rv">
+      <span class="mono tag">About Vedha Associates</span>
+      <div class="since" aria-label="Since 2010">2010</div>
+      <p class="lead">Sixteen years of building homes in Chidambaram, one family at a time.</p>
+      <p class="body">From Annamalai Nagar we design and build multi-storied buildings, duplex houses and villas with every amenity a family wants. Every home gets an itemised quote, tested materials, stage-wise payment and one engineer who stays with it from the soil test to the day you get the keys.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px"><a class="btn gold" href="#homes">See what we build <span class="arr">→</span></a></div>
+    </div>
+    <div class="collage rv">
+      <figure class="a"><img src="img/site.jpg" alt="Construction site with a tower crane at golden hour" loading="lazy"><span class="rep">Representative image</span></figure>
+      <figure class="b"><img src="img/interior.jpg" alt="Modern living room with leather sofa and concrete wall" loading="lazy"><span class="rep">Representative image</span></figure>
+      <div class="badge"><b>16+</b>years of<br>trust</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOMES ============ -->
+<section id="homes" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono tag">Our specialities</span><h2>Homes we <i>build</i></h2></div>
+      <p>Three kinds of home, built by our own site teams. Tap "View in 3D" to turn a model around and see it from every side.</p>
+    </div>
+    <div class="homes">
+      <article class="home rv">
+        <div class="pic"><img src="img/multi.jpg" alt="Contemporary multi-storey apartment building with curved white balconies" loading="lazy"><span class="num">01</span><span class="rep">Representative render</span><h3>Multi-storied buildings</h3></div>
+        <div class="body">
+          <p class="for">For rental income, joint families and apartment blocks, with stilt parking and homes above.</p>
+          <dl><dt>Size</dt><dd>G+2 to G+4 · 3,000–12,000 sq.ft</dd><dt>Time</dt><dd>10–18 months</dd><dt>With</dt><dd>Stilt parking, lift provision, separate meters</dd></dl>
+          <div class="acts"><button class="btn" type="button" data-3d="multi">View in 3D</button><a class="btn gold" href="#contact" data-plan="Multi-storied building">Plan mine</a></div>
+        </div>
+      </article>
+      <article class="home rv">
+        <div class="pic"><img src="img/duplex.jpg" alt="Two-storey contemporary house with twin gables and tall glass windows" loading="lazy"><span class="num">02</span><span class="rep">Representative render</span><h3>Duplex houses</h3></div>
+        <div class="body">
+          <p class="for">For families who want space and privacy across two levels, with a double-height living hall.</p>
+          <dl><dt>Size</dt><dd>G+1 · 1,800–3,500 sq.ft</dd><dt>Time</dt><dd>8–12 months</dd><dt>With</dt><dd>Designer staircase, terrace garden, car porch</dd></dl>
+          <div class="acts"><button class="btn" type="button" data-3d="duplex">View in 3D</button><a class="btn gold" href="#contact" data-plan="Duplex house">Plan mine</a></div>
+        </div>
+      </article>
+      <article class="home rv">
+        <div class="pic"><img src="img/villa.jpg" alt="Luxury villa with large glass walls, terraces and swimming pool" loading="lazy"><span class="num">03</span><span class="rep">Representative render</span><h3>Villas with amenities</h3></div>
+        <div class="body">
+          <p class="for">For premium independent homes and gated villa clusters, with amenities designed into the structure.</p>
+          <dl><dt>Size</dt><dd>2,500–6,000 sq.ft</dd><dt>Time</dt><dd>10–16 months</dd><dt>With</dt><dd>Pool, garden, home theatre, gym, solar</dd></dl>
+          <div class="acts"><button class="btn" type="button" data-3d="villa">View in 3D</button><a class="btn gold" href="#contact" data-plan="Villa with amenities">Plan mine</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3D VIEW ============ -->
+<section id="view3d">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono tag">Interactive 3D</span><h2>Walk around your <i>future home</i></h2></div>
+      <p>Drag to turn the model and see every side. Switch to dusk to see it lit up at night. Your own home's 3D model is prepared from your plan after the site visit.</p>
+    </div>
+    <div class="v3d rv">
+      <div class="v3d-stage" id="v3d-stage">
+        <canvas id="v3d" role="img" aria-label="3D model of the selected home type"></canvas>
+        <div class="v3d-tools"><button type="button" id="tod-day" aria-pressed="true">Day</button><button type="button" id="tod-dusk" aria-pressed="false">Dusk</button></div>
+        <div class="v3d-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg>Drag to rotate</div>
+      </div>
+      <div class="v3d-side">
+        <div class="tabs" role="tablist" aria-label="Home type in 3D">
+          <button type="button" role="tab" id="t-multi" aria-controls="v3d-stage" aria-selected="true" data-type="multi">Multi-storied<span class="k">G+3</span></button>
+          <button type="button" role="tab" id="t-duplex" aria-controls="v3d-stage" aria-selected="false" data-type="duplex" tabindex="-1">Duplex house<span class="k">G+1</span></button>
+          <button type="button" role="tab" id="t-villa" aria-controls="v3d-stage" aria-selected="false" data-type="villa" tabindex="-1">Villa<span class="k">Pool</span></button>
+        </div>
+        <h3 id="v3d-title">Multi-storied building</h3>
+        <ul class="incl" id="v3d-incl"></ul>
+        <a class="btn gold" href="#contact" id="v3d-cta">Plan my building <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AMENITIES ============ -->
+<section id="amenities" class="amen-band">
+  <div class="bgimg"><img src="img/resort.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono tag">Villas with multiple amenities</span><h2>Luxury, planned in <i>from day one</i></h2></div>
+      <p>Amenities work best when the structure is designed around them. We plan pool plumbing, theatre acoustics, solar loads and lift pits into the drawings before the first footing is dug.</p>
+    </div>
+    <div class="amen rv">
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 22c3 0 3-2 6.5-2S13 22 16 22s3-2 6.5-2S26 22 29 22M3 27c3 0 3-2 6.5-2S13 27 16 27s3-2 6.5-2S26 27 29 27M10 18V7a3 3 0 0 1 6 0M18 18V7a3 3 0 0 1 6 0M10 11h8M10 15h8"/></svg><b>Swimming pool</b><span>Private pool with filtration and deck</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 29V15M16 15c-5 0-8-3-8-7 4 0 8 3 8 7zM16 19c4 0 7-3 7-7-4 0-7 3-7 7zM6 29h20"/></svg><b>Landscaped garden</b><span>Lawn, planters and garden lighting</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="6" width="24" height="15"/><path d="M10 27h12M16 21v6M14 11l5 2.5-5 2.5z"/></svg><b>Home theatre</b><span>Acoustic room with projector wiring</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 16h24M8 11v10M5 13v6M24 11v10M27 13v6"/></svg><b>Gym room</b><span>Reinforced floor and ventilation</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 24l4-12h14l4 12zM7 18h18M13 12l-1.5 12M19 12l1.5 12M16 3v4M9 5l2 3M23 5l-2 3"/></svg><b>Solar power</b><span>Rooftop panels and inverter room</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 4c4 6 8 10 8 15a8 8 0 0 1-16 0c0-5 4-9 8-15zM12 20a4 4 0 0 0 4 4"/></svg><b>Rainwater harvesting</b><span>Recharge pit and storage sump</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="12" width="24" height="15"/><path d="M4 18h24M10 12V6h12v6M14 22h4"/></svg><b>Modular kitchen</b><span>Planned plumbing, gas and chimney points</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 14L16 5l13 9M7 12v15h18V12M11 27v-7h10v7"/></svg><b>Car porch</b><span>Covered parking with driveway</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="3" width="14" height="26"/><path d="M13 10l3-3 3 3M13 22l3 3 3-3M9 16h14"/></svg><b>Home lift</b><span>Lift pit and shaft in the structure</span></div>
+      <div class="am"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 26a2 2 0 1 0 0-.1M10 20a8.5 8.5 0 0 1 12 0M5.5 15.5a15 15 0 0 1 21 0"/></svg><b>Home automation</b><span>Smart lighting, CCTV and gate</span></div>
+    </div>
+    <div class="more">
+      <div class="svc rv"><h3>Foundations &amp; RCC</h3><p>Isolated, combined and raft footings, columns, beams and slabs to approved structural drawings.</p></div>
+      <div class="svc rv"><h3>Compound walls &amp; tanks</h3><p>Boundary walls, gates, overhead and underground tanks, septic tanks and soak pits.</p></div>
+      <div class="svc rv"><h3>Renovation &amp; extra floors</h3><p>Additional floors, crack and leakage repair, column jacketing and waterproofing.</p></div>
+      <div class="svc rv"><h3>Plans &amp; approvals</h3><p>Floor plans, elevations, structural drawings and help with local body approval.</p></div>
+    </div>
+  </div>
+  <span class="rep">Representative 3D render</span>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono tag">Construction sequence</span><h2>How we <i>build</i></h2></div>
+      <p>The same six stages on every Vedha site. At the end of each stage you get photos and the engineer's checklist before the next payment is due.</p>
+    </div>
+    <div class="proc">
+      <figure class="proc-img" style="margin:0"><img src="img/site.jpg" alt="Building under construction with a tower crane at sunset" loading="lazy"><span class="rep">Representative image</span><div class="cap"><b>Checked at every pour</b><span>Slump test on site, cube tests at 7 and 28 days</span></div></figure>
+      <div class="timeline" id="timeline">
+        <div class="tl-fill" id="tl-fill"></div>
+        <div class="step"><div class="dot">1</div><h3>Site visit &amp; soil test</h3><p>Survey, levels and soil bearing capacity check before any design.</p><span class="mono">Week 0 · Free</span></div>
+        <div class="step"><div class="dot">2</div><h3>Drawings, 3D &amp; BOQ</h3><p>Plan, elevation, 3D view, structural drawings and an itemised bill of quantities.</p><span class="mono">Week 1–2</span></div>
+        <div class="step"><div class="dot">3</div><h3>Approvals</h3><p>Help with local body plan approval and utility connections.</p><span class="mono">As required</span></div>
+        <div class="step"><div class="dot">4</div><h3>Foundation</h3><p>Excavation, PCC, footings and plinth beam with anti-termite treatment.</p><span class="mono">Cube test 7 / 28 day</span></div>
+        <div class="step"><div class="dot">5</div><h3>Superstructure</h3><p>Columns, beams, slabs and brickwork, with slab curing for at least 14 days.</p><span class="mono">Slump checked per pour</span></div>
+        <div class="step"><div class="dot">6</div><h3>Finishes &amp; handover</h3><p>Plastering, flooring, plumbing, electrical and painting, then a joint snag walk.</p><span class="mono">12-month defect cover</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESTIMATOR ============ -->
+<section id="estimate" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono tag">Rough cost estimator</span><h2>What will my home <i>cost?</i></h2></div>
+      <p>A first number for planning. Rates are indicative per square foot of built-up area. After the free site visit we give you a fixed, itemised quote.</p>
+    </div>
+    <div class="estimator rv">
+      <div class="est-in">
+        <div class="field">
+          <span class="lbl" id="kind-l">Type of work</span>
+          <div class="seg" role="radiogroup" aria-labelledby="kind-l">
+            <input type="radio" name="kind" id="k-struct" value="structure"><label for="k-struct">Structure only</label>
+            <input type="radio" name="kind" id="k-std" value="standard" checked><label for="k-std">Turnkey · Standard</label>
+            <input type="radio" name="kind" id="k-prem" value="premium"><label for="k-prem">Turnkey · Premium</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="area">Built-up area (sq.ft)</label>
+          <div class="area-row">
+            <input type="number" id="area" min="300" max="15000" step="50" value="1800">
+            <input type="range" id="area-r" min="300" max="15000" step="50" value="1800" aria-label="Built-up area slider">
+          </div>
+          <p class="hint">Total across all floors.</p>
+        </div>
+        <div class="field">
+          <label for="floors">Floors</label>
+          <select id="floors"><option value="1">Ground only</option><option value="2" selected>G+1 (duplex)</option><option value="3">G+2</option><option value="4">G+3</option><option value="5">G+4</option></select>
+        </div>
+      </div>
+      <div class="est-out" aria-live="polite">
+        <span class="mono">Indicative project cost</span>
+        <div class="big" id="total">₹ 0</div>
+        <span class="mono" id="rate">@ ₹ 0 / sq.ft</span>
+        <div class="bars" id="split"></div>
+        <a class="btn gold" id="est-wa" href="#" target="_blank" rel="noopener">Send this estimate on WhatsApp</a>
+        <p class="note">Sample rates for planning only. Final cost depends on soil, design, materials and site access.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono tag">Why families choose Vedha</span><h2>On site, <i>every day</i></h2></div>
+      <p>Clients come back and send their relatives because the work matches the drawing and the bill matches the quote.</p>
+    </div>
+    <div class="why rv">
+      <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3h12l5 5v21H8zM20 3v5h5M12 14h9M12 19h9M12 24h6"/></svg><h3>Itemised BOQ</h3><p>Every rate, quantity and brand listed up front. No lump sums hiding extras.</p></div>
+      <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 26h20M9 26V12h14v14M12 12V6h8v6M13 17h6M13 21h6"/></svg><h3>Tested materials</h3><p>ISI-marked cement, Fe500D TMT bars and cube tests for every major pour.</p></div>
+      <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="8" width="24" height="17"/><path d="M4 13h24M9 20h5"/></svg><h3>Stage-wise payment</h3><p>You pay as each stage is finished and checked, never far ahead of the work.</p></div>
+      <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 15a9 9 0 0 1 18 0zM5 15h22M16 6v3M10 20a6 6 0 0 0 12 0"/></svg><h3>Engineer in charge</h3><p>One qualified site engineer owns your project from first visit to handover.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono tag">Our own sites</span><h2>From our <i>sites</i></h2></div>
+      <p>Real photos from Vedha Associates projects, ongoing and finished, added by our team as each stage is completed.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter photos">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="ongoing" aria-pressed="false">Ongoing sites</button>
+      <button type="button" data-f="completed" aria-pressed="false">Completed</button>
+      <button type="button" data-f="materials" aria-pressed="false">Materials &amp; testing</button>
+    </div>
+    <div class="gallery" id="gallery-grid"></div>
+    <div class="empty" id="gallery-empty"><b>Site photos will appear here</b>Our team adds new photos as each stage is finished.</div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap faq">
+    <aside class="rv">
+      <span class="mono tag">Questions families ask</span>
+      <h2>Before you <i>build</i></h2>
+      <p>Don't see your question? Call or WhatsApp Manivasagan on +91 73390 00678.</p>
+    </aside>
+    <div class="faq-list rv">
+      <details open><summary>How much does it cost to build a house in Chidambaram?</summary><p>It depends on the type of work and finishes. Use the estimator above for a first figure. After the free site visit we give you an itemised BOQ listing every quantity, rate and brand, so you can compare it line by line.</p></details>
+      <details><summary>Can I see my home in 3D before construction?</summary><p>Yes. After the site visit and plan, we prepare elevation drawings and a 3D view of your home so you can see it from every side before work starts.</p></details>
+      <details><summary>How long does a duplex house take?</summary><p>A typical G+1 duplex of 1,800–3,000 sq.ft takes about 8 to 12 months from foundation to handover, depending on design, finishes and approvals.</p></details>
+      <details><summary>Do you help with plan approval?</summary><p>Yes. We prepare the floor plans, elevations and structural drawings and help you with local body plan approval and utility connections.</p></details>
+      <details><summary>How does payment work?</summary><p>Payment is stage-wise. Each stage is finished and checked by our engineer, you receive photos and a checklist, and only then the next payment falls due.</p></details>
+      <details><summary>Can I choose my own brands and materials?</summary><p>Yes. The BOQ lists brands for cement, steel, tiles, sanitaryware and electricals. You can choose alternatives and we update the quote before work starts.</p></details>
+      <details><summary>Do you take projects outside Chidambaram?</summary><p>Our office is in Annamalai Nagar, Chidambaram. For sites in nearby towns, call us with the location and we will confirm.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<div class="cta-band">
+  <div class="wrap">
+    <div><h2>Ready to build your <i>dream home?</i></h2><p>Free site visit · Itemised quote · No obligation</p></div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a class="btn dark" href="#contact">Book a free site visit <span class="arr">→</span></a>
+      <a class="btn" id="cta-wa" href="https://wa.me/917339000678" target="_blank" rel="noopener">WhatsApp us</a>
+    </div>
+  </div>
+</div>
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono tag">Contact</span><h2>Start your <i>project</i></h2></div>
+      <p>Tell us about your plot and what you want to build. We usually arrange the free site visit within the week.</p>
+    </div>
+    <div class="contact rv">
+      <div class="tblock">
+        <div><span class="mono">Firm</span><strong>Vedha Associates</strong></div>
+        <div><span class="mono">Contact person</span><strong>Manivasagan</strong></div>
+        <div><span class="mono">Phone / WhatsApp</span><strong class="sel" id="phone">+91 73390 00678</strong><button class="copy" type="button" data-copy="phone">Copy number</button></div>
+        <div><span class="mono">Email</span><strong class="ph sel" id="email">info@vedhaassociates.in</strong><button class="copy" type="button" data-copy="email">Copy email</button></div>
+        <div><span class="mono">Office</span><strong>Annamalai Nagar, Chidambaram,<br>Cuddalore Dt., Tamil Nadu 608002</strong><a class="copy" href="https://maps.app.goo.gl/5K7LoGXSuCG29k8r9" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>
+        <div><span class="mono">Hours</span><strong>Mon – Sat · 9:00 am – 6:30 pm</strong></div>
+      </div>
+      <form id="enquiry" novalidate>
+        <h3>Request a free site visit</h3>
+        <div><label for="f-name">Your name</label><input type="text" id="f-name" required autocomplete="name"></div>
+        <div><label for="f-phone">Phone</label><input type="tel" id="f-phone" required autocomplete="tel"></div>
+        <div><label for="f-type">Project type</label>
+          <select id="f-type"><option>Multi-storied building</option><option>Duplex house</option><option>Villa with amenities</option><option>Foundation / RCC only</option><option>Compound wall / tank</option><option>Renovation / extra floor</option></select></div>
+        <div><label for="f-loc">Site location</label><input type="text" id="f-loc" placeholder="Area, town"></div>
+        <div class="full"><label for="f-msg">About the project</label><textarea id="f-msg" rows="4" placeholder="Plot size, floors, amenities, timeline"></textarea></div>
+        <div class="full"><button class="btn gold" type="submit">Prepare my enquiry <span class="arr">→</span></button></div>
+        <div class="ok full" id="ok" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <svg viewBox="0 0 64 64" width="72" height="72" aria-hidden="true" style="margin-bottom:14px"><use href="#vmark"/></svg>
+        <b class="name">Vedha <em>Associates</em></b>
+        <span class="mono" style="color:var(--gold)">Est. 2010 · Chidambaram</span>
+        <p style="margin-top:12px">Builders of multi-storied buildings, duplex houses and villas with amenities.</p>
+        <p class="ta" lang="ta">உங்கள் கனவு இல்லம், எங்கள் பொறுப்பு</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="#homes">Homes we build</a></li><li><a href="#view3d">3D view</a></li><li><a href="#amenities">Villa amenities</a></li><li><a href="#estimate">Cost estimate</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Manivasagan</li><li>+91 73390 00678</li><li><span class="ph">info@vedhaassociates.in</span></li><li><a href="https://wa.me/917339000678" target="_blank" rel="noopener" id="foot-wa">WhatsApp ↗</a></li></ul></div>
+      <div><h4>Office</h4><ul><li>Annamalai Nagar, Chidambaram</li><li>Cuddalore Dt., Tamil Nadu 608002</li><li>Mon – Sat · 9:00 am – 6:30 pm</li><li><a href="https://maps.app.goo.gl/5K7LoGXSuCG29k8r9" target="_blank" rel="noopener">Get directions ↗</a></li></ul></div>
+    </div>
+    <p class="credits">Representative images, not Vedha Associates projects:
+      <a href="https://commons.wikimedia.org/wiki/File:3D_Rendering_of_Modern_Luxury_Villa_Exterior_with_Pool.jpg" target="_blank" rel="noopener">villa render</a> by Tuantranseo (CC BY 4.0, cropped);
+      <a href="https://commons.wikimedia.org/wiki/File:Contemporary_Residence_with_Gable_Windows_%E2%80%93_3D_Architectural_Visualization.jpg" target="_blank" rel="noopener">duplex render</a> by Tuantranseo (CC BY 4.0, cropped);
+      <a href="https://commons.wikimedia.org/wiki/File:3D_rendering_of_a_tropical_resort_exterior_at_sunset.jpg" target="_blank" rel="noopener">resort render</a> by Tuantranseo (CC0);
+      <a href="https://commons.wikimedia.org/wiki/File:Klassische_3D_Architekturvisualisierung.jpg" target="_blank" rel="noopener">apartment render</a> by Benjamin Springer (CC BY-SA 4.0, cropped);
+      <a href="https://www.flickr.com/photos/26978304@N08/20616334999" target="_blank" rel="noopener">construction site</a> by thienzieyung (CC BY 2.0);
+      <a href="https://www.flickr.com/photos/96511847@N04/9202816086" target="_blank" rel="noopener">living room</a> by Foto Miki Digital (Public Domain).</p>
+    <div class="foot-bottom"><span>© 2026 Vedha Associates · Chidambaram</span><span>GSTIN: <span class="ph">33XXXXXXXXXXXXX</span></span></div>
+  </div>
+</footer>
+
+<!-- Fixed UI -->
+<button class="side-tab" id="side-tab" type="button" hidden aria-controls="drawer">
+  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 12V3M4 7l4-4 4 4M2 14h12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+  Upload photos
+</button>
+<div class="drawer-bg" id="drawer-bg" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="Upload photos">
+  <div class="dhead"><h3>Upload photos</h3><button class="x" id="drawer-x" type="button" aria-label="Close">×</button></div>
+  <div class="drawer-body">
+    <label class="drop" id="drop" for="ph-files">
+      <svg width="28" height="28" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 12V3M4 7l4-4 4 4M2 14h12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      <b>Choose photos or drop them here</b>
+      <span>JPG, PNG or WebP · large photos are resized automatically</span>
+    </label>
+    <input type="file" id="ph-files" accept="image/jpeg,image/png,image/webp" multiple hidden>
+    <div class="queue" id="queue"></div>
+    <div><label for="ph-caption">Caption</label><input type="text" id="ph-caption" placeholder="e.g. First floor slab casting, duplex at Chidambaram"></div>
+    <div><label for="ph-cat">Category</label>
+      <select id="ph-cat"><option value="ongoing">Ongoing site</option><option value="completed">Completed project</option><option value="materials">Materials &amp; testing</option></select></div>
+    <button class="btn gold" id="ph-upload" type="button" disabled>Upload</button>
+    <div class="status" id="ph-status" hidden></div>
+  </div>
+</aside>
+<a class="wa" id="wa-btn" href="https://wa.me/917339000678" target="_blank" rel="noopener" aria-label="Chat with Vedha Associates on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.6 3 15.6c0 2.5.8 4.9 2.1 6.9L3.6 29l6.7-1.7c1.8 1 3.8 1.5 5.7 1.5 7.2 0 13-5.6 13-12.6S23.2 3 16 3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11.6 10.2c.3-.6.6-.6.9-.6h.7c.2 0 .5 0 .7.6l1 2.4c.1.2.1.5 0 .7l-.6.8c-.2.2-.2.5 0 .8.5.9 1.2 1.7 2 2.4.7.6 1.5 1 2.3 1.3.3.1.6 0 .7-.2l.9-1.1c.2-.3.5-.3.8-.2l2.3 1.1c.3.1.5.3.5.6 0 .7-.2 1.6-.9 2.2-.8.7-2.2 1-3.6.6-2.3-.7-4.2-2-5.8-3.8-1.2-1.4-2.2-3-2.4-4.8-.1-1.2.3-2.1.5-2.8z" fill="currentColor"/></svg>
+  <span>WhatsApp us</span>
+</a>
+<nav class="mbar" aria-label="Quick contact">
+  <a href="tel:+917339000678"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a class="w" id="mbar-wa" href="https://wa.me/917339000678" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.6 3 15.6c0 2.5.8 4.9 2.1 6.9L3.6 29l6.7-1.7c1.8 1 3.8 1.5 5.7 1.5 7.2 0 13-5.6 13-12.6S23.2 3 16 3z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>WhatsApp</a>
+  <a class="v" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>Free visit</a>
+</nav>
+<div class="lightbox" id="lightbox" hidden><div><img id="lb-img" alt=""><p id="lb-cap"></p></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const REDUCED=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const WA_NUMBER="917339000678";
+const waLink=t=>"https://wa.me/"+WA_NUMBER+(t?"?text="+encodeURIComponent(t):"");
+const HELLO="Hello Manivasagan, I'd like to enquire about a construction project.";
+["wa-btn","cta-wa","mbar-wa","foot-wa"].forEach(id=>{const el=document.getElementById(id);if(el)el.href=waLink(HELLO)});
+document.querySelectorAll("[data-plan]").forEach(a=>a.addEventListener("click",()=>{document.getElementById("f-type").value=a.dataset.plan}));
+
+/* ---------- Top bar ---------- */
+(function(){
+  const burger=document.getElementById("burger"),menu=document.getElementById("mmenu"),bar=document.getElementById("progress"),top=document.getElementById("topbar");
+  burger.addEventListener("click",()=>{const o=burger.getAttribute("aria-expanded")==="true";burger.setAttribute("aria-expanded",!o);burger.setAttribute("aria-label",o?"Open menu":"Close menu");menu.hidden=o});
+  menu.addEventListener("click",e=>{if(e.target.closest("a")){menu.hidden=true;burger.setAttribute("aria-expanded","false")}});
+  const setH=()=>document.documentElement.style.setProperty("--topbar-h",(top.offsetHeight+12)+"px");
+  setH();addEventListener("resize",setH);
+  const links=[...document.querySelectorAll("#navlinks a")],secs=links.map(a=>document.querySelector(a.getAttribute("href")));
+  let ticking=false;
+  function onScroll(){
+    const h=document.documentElement.scrollHeight-innerHeight;
+    bar.style.transform=`scaleX(${h>0?Math.min(1,scrollY/h):0})`;
+    const y=top.offsetHeight+40;let cur=-1;
+    secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<=y)cur=i});
+    links.forEach((a,i)=>a.classList.toggle("active",i===cur));
+    timelineFill();ticking=false;
+  }
+  addEventListener("scroll",()=>{if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
+  window._onScroll=onScroll;
+})();
+
+/* ---------- Reveal + count-up ---------- */
+(function(){
+  if(REDUCED||!("IntersectionObserver" in window))return;
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;const el=e.target;
+    if(el.dataset.count){const end=+el.dataset.count,t0=performance.now();
+      const step=t=>{const k=Math.min(1,(t-t0)/1400);el.textContent=Math.round(end*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)}
+    else el.classList.add("in");
+    io.unobserve(el);
+  }),{rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll(".rv").forEach(el=>{if(el.getBoundingClientRect().top>innerHeight)io.observe(el)});
+  document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+})();
+
+/* ---------- Timeline ---------- */
+function timelineFill(){
+  const tl=document.getElementById("timeline");if(!tl)return;
+  const r=tl.getBoundingClientRect(),k=Math.max(0,Math.min(1,(innerHeight*.7-r.top)/(r.height||1)));
+  document.getElementById("tl-fill").style.transform=`scaleY(${k})`;
+  tl.querySelectorAll(".step").forEach(s=>s.classList.toggle("on",k>0&&k*r.height>=s.offsetTop-4));
+}
+timelineFill();
+
+/* ---------- 3D viewer (three.js) ---------- */
+(function(){
+  const DATA={
+    multi:{title:"Multi-storied building",cta:"Plan my building",plan:"Multi-storied building",incl:["Stilt car parking at ground level","Three residential floors","Staircase and lift head room","Overhead water tank","Terrace with parapet"]},
+    duplex:{title:"Duplex house",cta:"Plan my duplex",plan:"Duplex house",incl:["Double-height glass living hall","Upper floor master suite","Terrace with glass railing","Covered car porch","Garden tree in front"]},
+    villa:{title:"Villa with amenities",cta:"Plan my villa",plan:"Villa with amenities",incl:["Two-level villa with wide glazing","Private swimming pool and deck","Landscaped lawn and trees","Upper terrace with railing","Room for theatre, gym and solar"]}
+  };
+  const B=(x,y,z,w,d,h,c,o={})=>Object.assign({x,y,z,w,d,h,c},o);
+  const MODELS={
+    multi:()=>{const L=[B(-1.4,-1.4,0,8.8,7.8,.04,"plot")];
+      [[0,0],[2.8,0],[5.6,0],[0,4.6],[2.8,4.6],[5.6,4.6]].forEach(([x,y])=>L.push(B(x,y,0,.4,.4,1.1,"col")));
+      L.push(B(-.15,-.15,1.1,6.3,5.3,.16,"slab"));
+      for(let i=0;i<3;i++){const z=1.26+i*1.3;L.push(B(0,0,z,6,5,1.14,"wall",{wx:3,wy:3}));L.push(B(-.15,-.15,z+1.14,6.3,5.3,.16,"slab"));L.push(B(1.2,5,z+.05,3.6,.9,.08,"slab"));L.push(B(1.2,5.86,z+.13,3.6,.04,.5,"glassrail"))}
+      const t=1.26+3*1.3;L.push(B(3.6,2.6,t,1.8,1.8,.95,"wall",{wx:1,wy:1}));L.push(B(.6,.8,t,1.6,1.2,.7,"tank"));
+      L.push(B(-.15,-.15,t,6.3,.08,.45,"glassrail"));L.push(B(-.15,5.07,t,6.3,.08,.45,"glassrail"));
+      L.push(B(7,6.2,0,0,0,0,"tree",{r:.6}));return L},
+    duplex:()=>{const L=[B(-1.4,-1.4,0,9.8,8.2,.04,"plot")];
+      L.push(B(0,0,0,6,5,1.4,"wall",{wx:2,wy:2,big:true}));L.push(B(-.15,-.15,1.4,6.3,5.3,.16,"slab"));
+      L.push(B(6,2.6,1.2,1.9,2.6,.12,"slab"));L.push(B(7.6,4.9,0,.16,.16,1.2,"col"));L.push(B(7.6,2.7,0,.16,.16,1.2,"col"));
+      L.push(B(0,0,1.56,4,5,1.4,"wall",{wx:2,wy:2,big:true}));L.push(B(-.25,-.25,2.96,4.5,5.5,.18,"slab"));
+      L.push(B(4.1,4.92,1.56,1.9,.06,.5,"glassrail"));L.push(B(5.94,0,1.56,.06,5,.5,"glassrail"));
+      L.push(B(-1,6.2,0,0,0,0,"tree",{r:.7}));L.push(B(7.4,-.6,0,0,0,0,"tree",{r:.55}));return L},
+    villa:()=>{const L=[B(-1.6,-1.6,0,12,11,.04,"lawn")];
+      L.push(B(.3,5.7,0,6.4,3.2,.06,"deck"));L.push(B(.7,6.1,0,5.6,2.3,.08,"pool"));
+      L.push(B(0,0,0,8,5,1.4,"wall",{wx:3,wy:2,big:true}));L.push(B(-.3,-.3,1.4,8.6,5.6,.16,"slab"));
+      L.push(B(.2,0,1.56,4.6,5,1.35,"wall",{wx:2,wy:2,big:true}));L.push(B(-.1,-.4,2.91,5.4,5.8,.18,"slab"));
+      L.push(B(4.8,4.94,1.56,3.2,.06,.5,"glassrail"));L.push(B(7.94,0,1.56,.06,5,.5,"glassrail"));
+      L.push(B(8.9,7.4,0,0,0,0,"tree",{r:.85}));L.push(B(9.1,1.4,0,0,0,0,"tree",{r:.7}));L.push(B(-.8,8.8,0,0,0,0,"tree",{r:.6}));L.push(B(7.5,9.2,0,0,0,0,"tree",{r:.5}));
+      return L}
+  };
+  const stage=document.getElementById("v3d-stage"),cv=document.getElementById("v3d");
+  const tabs=[...document.querySelectorAll('[role="tab"]')];
+  let cur="multi";
+  function setInfo(type){
+    const D=DATA[type];document.getElementById("v3d-title").textContent=D.title;
+    document.getElementById("v3d-incl").replaceChildren(...D.incl.map(t=>{const li=document.createElement("li");li.textContent=t;return li}));
+    const cta=document.getElementById("v3d-cta");cta.firstChild.textContent=D.cta+" ";cta.onclick=()=>{document.getElementById("f-type").value=D.plan};
+    tabs.forEach(t=>{const on=t.dataset.type===type;t.setAttribute("aria-selected",on);t.tabIndex=on?0:-1;if(on)stage.setAttribute("aria-labelledby",t.id)});
+  }
+  function fallback(){
+    const img=document.createElement("img");img.className="fallback";img.src="img/multi.jpg";img.alt="Representative render of the selected home type";stage.prepend(img);cv.remove();
+    const tools=stage.querySelector(".v3d-tools");if(tools)tools.remove();
+    const hint=stage.querySelector(".v3d-hint");hint.style.cssText="background:rgba(11,11,12,.8);padding:8px 12px;color:var(--ink);text-transform:none;letter-spacing:0;font-family:var(--body);font-size:.85rem;right:14px";
+    hint.textContent="3D view needs WebGL, which is turned off in this browser. Showing a representative render instead.";
+    stage.style.cursor="default";
+    setInfo("multi");
+    tabs.forEach(t=>t.addEventListener("click",()=>{cur=t.dataset.type;setInfo(cur);img.src="img/"+cur+".jpg"}));
+    document.querySelectorAll("[data-3d]").forEach(b=>b.addEventListener("click",()=>{cur=b.dataset["3d"];setInfo(cur);img.src="img/"+cur+".jpg";document.getElementById("view3d").scrollIntoView()}));
+  }
+  const glOK=(()=>{try{const c=document.createElement("canvas");return !!(window.WebGLRenderingContext&&(c.getContext("webgl")||c.getContext("experimental-webgl")))}catch(e){return false}})();
+  if(!window.THREE||!glOK){fallback();return}
+  const T=THREE;
+  let renderer;
+  try{renderer=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){fallback();return}
+  cv.addEventListener("webglcontextlost",e=>{e.preventDefault();visible=false;fallback()},{once:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;
+  renderer.outputEncoding=T.sRGBEncoding;renderer.toneMapping=T.ACESFilmicToneMapping;
+  const scene=new T.Scene();
+  const camera=new T.PerspectiveCamera(32,1,.1,200);
+  const hemi=new T.HemisphereLight(0xfff3dd,0x1a1712,.6);scene.add(hemi);
+  const sun=new T.DirectionalLight(0xffe2b0,1.6);sun.position.set(-10,16,12);sun.castShadow=true;
+  sun.shadow.mapSize.set(1024,1024);Object.assign(sun.shadow.camera,{left:-12,right:12,top:12,bottom:-12,near:1,far:60});scene.add(sun);
+  scene.fog=new T.Fog(0x16130f,28,60);
+  const ground=new T.Mesh(new T.CircleGeometry(120,64),new T.MeshStandardMaterial({color:0x0c0b09,roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.01;ground.receiveShadow=true;scene.add(ground);
+  const M={
+    wall:new T.MeshStandardMaterial({color:0xefe9df,roughness:.85}),
+    slab:new T.MeshStandardMaterial({color:0xc8a15a,roughness:.45,metalness:.55}),
+    col:new T.MeshStandardMaterial({color:0xbdb5a8,roughness:.8}),
+    tank:new T.MeshStandardMaterial({color:0x3a3a3d,roughness:.6}),
+    plot:new T.MeshStandardMaterial({color:0x2c2a26,roughness:1}),
+    lawn:new T.MeshStandardMaterial({color:0x2f4a2c,roughness:1}),
+    deck:new T.MeshStandardMaterial({color:0x9c7d55,roughness:.8}),
+    pool:new T.MeshStandardMaterial({color:0x2a9cc8,roughness:.08,metalness:.2,emissive:0x0a3a50,emissiveIntensity:.4}),
+    glass:new T.MeshStandardMaterial({color:0x22313a,roughness:.08,metalness:.6,emissive:0xffc670,emissiveIntensity:0}),
+    glassrail:new T.MeshStandardMaterial({color:0x9fc4d6,roughness:.05,metalness:.3,transparent:true,opacity:.35}),
+    trunk:new T.MeshStandardMaterial({color:0x5a4632,roughness:1}),
+    leaf:new T.MeshStandardMaterial({color:0x3f6b3a,roughness:.9})
+  };
+  let group=null,parts=[],built=0,radius=14,sphere=6,center=new T.Vector3();
+  function addWin(parent,w,h,d,face,cx,cy,ww,wh){ // window on a face of a box sized w,h,d (local coords centred)
+    const t=.05,m=new T.Mesh(new T.BoxGeometry(face<2?ww:t,wh,face<2?t:ww),M.glass);
+    if(face===0)m.position.set(cx,cy,d/2+t/2);if(face===1)m.position.set(cx,cy,-d/2-t/2);
+    if(face===2)m.position.set(w/2+t/2,cy,cx);if(face===3)m.position.set(-w/2-t/2,cy,cx);parent.add(m);
+  }
+  function build(type){
+    if(group){scene.remove(group);group.traverse(o=>{if(o.geometry)o.geometry.dispose()})}
+    group=new T.Group();parts=[];
+    const L=MODELS[type]();let minx=1e9,maxx=-1e9,miny=1e9,maxy=-1e9,maxz=0;
+    L.forEach(e=>{if(e.c==="tree")return;minx=Math.min(minx,e.x);maxx=Math.max(maxx,e.x+e.w);miny=Math.min(miny,e.y);maxy=Math.max(maxy,e.y+e.d);maxz=Math.max(maxz,e.z+e.h)});
+    const cx=(minx+maxx)/2,cy=(miny+maxy)/2;
+    L.forEach((e,i)=>{
+      let obj;
+      if(e.c==="tree"){obj=new T.Group();const tr=new T.Mesh(new T.CylinderGeometry(.07,.1,1.2,8),M.trunk);tr.position.y=.6;tr.castShadow=true;
+        const lf=new T.Mesh(new T.IcosahedronGeometry(e.r,1),M.leaf);lf.position.y=1.2+e.r*.6;lf.castShadow=true;obj.add(tr,lf);obj.position.set(e.x-cx,0,e.y-cy);obj.userData={base:0,h:1}}
+      else{
+        const geo=new T.BoxGeometry(e.w,e.h,e.d);geo.translate(0,e.h/2,0);
+        obj=new T.Mesh(geo,M[e.c]||M.wall);obj.castShadow=!["plot","lawn","deck","pool","glassrail"].includes(e.c);obj.receiveShadow=true;
+        obj.position.set(e.x+e.w/2-cx,e.z,e.y+e.d/2-cy);obj.userData={base:e.z};
+        if(e.c==="wall"){const wy=e.h*.52;
+          const nx=e.wx||0,ny=e.wy||0;
+          for(let j=0;j<nx;j++){const xc=-e.w/2+(j+.5)*e.w/nx;
+            if(e.big&&j===0){addWin(obj,e.w,e.h,e.d,0,xc,e.h*.5,e.w/nx*.8,e.h*.84)}else addWin(obj,e.w,e.h,e.d,0,xc,wy,e.w/nx*.45,e.h*.48);
+            addWin(obj,e.w,e.h,e.d,1,xc,wy,e.w/nx*.45,e.h*.48)}
+          for(let j=0;j<ny;j++){const zc=-e.d/2+(j+.5)*e.d/ny;addWin(obj,e.w,e.h,e.d,2,zc,wy,e.d/ny*.45,e.h*.48);addWin(obj,e.w,e.h,e.d,3,zc,wy,e.d/ny*.45,e.h*.48)}
+        }
+      }
+      obj.userData.i=i;group.add(obj);parts.push(obj);
+    });
+    scene.add(group);
+    const sx=maxx-minx,sz=maxy-miny;sphere=.5*Math.sqrt(sx*sx+sz*sz+maxz*maxz);center.set(0,maxz*.42,0);
+    built=REDUCED?1e9:performance.now();
+  }
+  // orbit
+  let theta=-.75,phi=1.05,auto=!REDUCED,drag=null,last=performance.now(),idleAt=0,visible=false,dusk=false;
+  stage.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,t:theta,p:phi};auto=false;stage.setPointerCapture(e.pointerId)});
+  stage.addEventListener("pointermove",e=>{if(!drag)return;theta=drag.t-(e.clientX-drag.x)*.008;phi=Math.max(.35,Math.min(1.45,drag.p-(e.clientY-drag.y)*.006))});
+  const endDrag=()=>{drag=null;idleAt=performance.now()};
+  stage.addEventListener("pointerup",endDrag);stage.addEventListener("pointercancel",endDrag);
+  function size(){const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
+  function setTime(d){dusk=d;stage.classList.toggle("dusk",d);
+    document.getElementById("tod-day").setAttribute("aria-pressed",!d);document.getElementById("tod-dusk").setAttribute("aria-pressed",d);
+    hemi.intensity=d?.28:.6;hemi.color.set(d?0x8fa6d6:0xfff3dd);sun.intensity=d?.35:1.6;sun.color.set(d?0x9db4ff:0xffe2b0);
+    M.glass.emissiveIntensity=d?1.4:0;M.pool.emissiveIntensity=d?1.2:.4;M.slab.metalness=d?.75:.55;ground.material.color.set(d?0x07080b:0x0c0b09);scene.fog.color.set(d?0x0b0d13:0x16130f);
+    if(!visible)render(performance.now())}
+  document.getElementById("tod-day").addEventListener("click",()=>setTime(false));
+  document.getElementById("tod-dusk").addEventListener("click",()=>setTime(true));
+  function render(now){
+    const dt=Math.min(.05,(now-last)/1000);last=now;
+    if(!auto&&!drag&&!REDUCED&&now-idleAt>4000)auto=true;
+    if(auto)theta+=dt*.18;
+    const vf=camera.fov*Math.PI/180,hf=2*Math.atan(Math.tan(vf/2)*camera.aspect);radius=sphere/Math.sin(Math.min(vf,hf)/2)*1.12;
+    camera.position.set(center.x+radius*Math.sin(phi)*Math.cos(theta),center.y+radius*Math.cos(phi),center.z+radius*Math.sin(phi)*Math.sin(theta));
+    camera.lookAt(center);
+    const n=parts.length,el=(now-built)/1400;
+    parts.forEach(p=>{const k=Math.max(0,Math.min(1,el*(n+1)-p.userData.i));const e=1-Math.pow(1-k,3);p.scale.y=Math.max(.0001,e);p.visible=k>0});
+    renderer.render(scene,camera);
+  }
+  function loop(now){if(visible){render(now);requestAnimationFrame(loop)}}
+  function show(type){cur=type;setInfo(type);build(type);if(!visible)render(performance.now())}
+  tabs.forEach(t=>{
+    t.addEventListener("click",()=>show(t.dataset.type));
+    t.addEventListener("keydown",e=>{const i=tabs.indexOf(t);let j=-1;if(e.key==="ArrowDown"||e.key==="ArrowRight")j=(i+1)%tabs.length;if(e.key==="ArrowUp"||e.key==="ArrowLeft")j=(i-1+tabs.length)%tabs.length;if(j>=0){e.preventDefault();tabs[j].focus();show(tabs[j].dataset.type)}});
+  });
+  document.querySelectorAll("[data-3d]").forEach(b=>b.addEventListener("click",()=>{show(b.dataset["3d"]);document.getElementById("view3d").scrollIntoView({behavior:REDUCED?"auto":"smooth"})}));
+  size();addEventListener("resize",()=>{size();if(!visible)render(performance.now())});
+  show("multi");built=-1e9;render(performance.now());
+  if("IntersectionObserver" in window){new IntersectionObserver(es=>{const v=es[0].isIntersecting;if(v&&!visible){visible=true;last=performance.now();if(!REDUCED&&!stage.dataset.seen){stage.dataset.seen=1;built=performance.now()}requestAnimationFrame(loop)}else if(!v)visible=false},{threshold:.15}).observe(stage)}
+})();
+
+/* ---------- Estimator ---------- */
+const RATES={structure:1250,standard:2100,premium:2850}; // sample rates per sq.ft (edit to your real rates)
+const FLOOR_ADJ={1:1.06,2:1,3:.98,4:.97,5:.97};
+const SPLIT={structure:[["Foundation & plinth",.24],["Columns, beams, slabs",.46],["Brickwork",.18],["Labour & supervision",.12]],
+  standard:[["Structure (RCC + masonry)",.48],["Plastering & flooring",.17],["Plumbing & electrical",.14],["Doors, windows, painting",.15],["Supervision",.06]],
+  premium:[["Structure (RCC + masonry)",.40],["Plastering & flooring",.20],["Plumbing & electrical",.15],["Doors, windows, painting",.19],["Supervision",.06]]};
+const KIND_NAME={structure:"Structure only",standard:"Turnkey · Standard",premium:"Turnkey · Premium"};
+const inr=n=>"₹ "+Math.round(n).toLocaleString("en-IN");
+const area=document.getElementById("area"),areaR=document.getElementById("area-r"),floors=document.getElementById("floors");
+function calc(){
+  const kind=document.querySelector('input[name=kind]:checked').value;
+  const a=Math.max(0,+area.value||0),rate=RATES[kind]*FLOOR_ADJ[floors.value],total=a*rate;
+  document.getElementById("total").textContent=inr(total);
+  document.getElementById("rate").textContent="@ "+inr(rate)+" / sq.ft · "+a.toLocaleString("en-IN")+" sq.ft";
+  const box=document.getElementById("split");box.replaceChildren();
+  SPLIT[kind].forEach(([k,p])=>{const r=document.createElement("div");r.className="bar";
+    const l=document.createElement("span");l.textContent=k;const v=document.createElement("span");v.className="amt";v.textContent=inr(total*p);
+    const tr=document.createElement("div");tr.className="track";const i=document.createElement("i");i.style.width=(p*100/.48)+"%";tr.appendChild(i);
+    r.append(l,v,tr);box.appendChild(r)});
+  document.getElementById("est-wa").href=waLink(`Hello Manivasagan, I used the cost estimator on your website.\nType: ${KIND_NAME[kind]}\nArea: ${a.toLocaleString("en-IN")} sq.ft\nFloors: ${floors.options[floors.selectedIndex].text}\nEstimate: ${inr(total)}\nPlease share an exact quote.`);
+}
+area.addEventListener("input",()=>{areaR.value=area.value;calc()});
+areaR.addEventListener("input",()=>{area.value=areaR.value;calc()});
+floors.addEventListener("change",calc);
+document.querySelectorAll('input[name=kind]').forEach(r=>r.addEventListener("change",calc));
+calc();
+
+/* ---------- Copy buttons ---------- */
+document.querySelectorAll("button.copy").forEach(b=>b.addEventListener("click",()=>{
+  const el=document.getElementById(b.dataset.copy),t=el.textContent.trim(),orig=b.textContent;
+  const done=()=>{b.textContent="Copied";setTimeout(()=>b.textContent=orig,1500)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected — press Ctrl+C";setTimeout(()=>b.textContent=orig,2000)};
+  try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+}));
+
+/* ---------- Enquiry form ---------- */
+document.getElementById("enquiry").addEventListener("submit",e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const ok=document.getElementById("ok");ok.hidden=false;ok.replaceChildren();
+  const p=document.createElement("p");
+  if(!v("f-name")||!v("f-phone")){p.textContent="Add your name and phone number so we can call you back.";ok.appendChild(p);return}
+  p.textContent=`Thanks, ${v("f-name")}. Your enquiry for "${v("f-type")}"${v("f-loc")?" at "+v("f-loc"):""} is ready. Send it to us on WhatsApp, or call +91 73390 00678, and we will book your free site visit.`;
+  const a=document.createElement("a");a.className="btn wa-inline";a.target="_blank";a.rel="noopener";a.textContent="Send on WhatsApp";
+  a.href=waLink(`Enquiry from ${v("f-name")} (${v("f-phone")})\nProject: ${v("f-type")}${v("f-loc")?"\nSite: "+v("f-loc"):""}${v("f-msg")?"\nDetails: "+v("f-msg"):""}`);
+  ok.append(p,a);
+});
+
+/* ---------- Photo gallery + upload (db + assets) ---------- */
+(function(){
+  const CAT={ongoing:"Ongoing site",completed:"Completed project",materials:"Materials & testing"};
+  const grid=document.getElementById("gallery-grid"),empty=document.getElementById("gallery-empty");
+  let photos=[],filter="all",db=null,assets=null,canDelete=false;
+  const setEmpty=(t,s)=>{empty.replaceChildren();const b=document.createElement("b");b.textContent=t;empty.append(b,s||"")};
+  function render(){
+    const list=photos.filter(p=>filter==="all"||p.category===filter);
+    grid.replaceChildren();empty.hidden=list.length>0;
+    if(!list.length&&photos.length)setEmpty("No photos in this category yet","");
+    for(const p of list){
+      const fig=document.createElement("figure");fig.className="ph-card";
+      const open=document.createElement("button");open.className="open";open.type="button";
+      const img=document.createElement("img");img.loading="lazy";img.src=p.src||("/_blob/"+p.assetId);img.alt=p.caption||"Site photo";
+      img.onerror=()=>{img.style.visibility="hidden"};
+      open.appendChild(img);open.addEventListener("click",()=>lightbox(p));
+      const cap=document.createElement("figcaption");
+      const tag=document.createElement("span");tag.className="mono";
+      tag.textContent=(CAT[p.category]||"Site")+" · "+new Date(p.createdAt).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"});
+      const t=document.createElement("span");t.textContent=p.caption||"";
+      cap.append(tag,t);fig.append(open,cap);
+      if(canDelete){
+        const del=document.createElement("button");del.className="del";del.type="button";del.textContent="Delete";let armed=false;
+        del.addEventListener("click",async()=>{
+          if(!armed){armed=true;del.textContent="Confirm delete";setTimeout(()=>{armed=false;del.textContent="Delete"},3000);return}
+          del.disabled=true;del.textContent="Deleting…";
+          try{await db.doc("photos/"+p.id).delete();if(assets)await assets.delete(p.assetId).catch(()=>{})}
+          catch(e){del.disabled=false;del.textContent="Delete failed"}
+        });
+        fig.appendChild(del);
+      }
+      grid.appendChild(fig);
+    }
+  }
+  document.getElementById("filters").addEventListener("click",e=>{
+    const b=e.target.closest("button");if(!b)return;filter=b.dataset.f;
+    document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+    setEmpty("Site photos will appear here","Our team adds new photos as each stage is finished.");render();
+  });
+  const lb=document.getElementById("lightbox");
+  function lightbox(p){const im=document.getElementById("lb-img");im.src=p.src||("/_blob/"+p.assetId);im.alt=p.caption||"Site photo";document.getElementById("lb-cap").textContent=p.caption||"";lb.hidden=false}
+  lb.addEventListener("click",()=>{lb.hidden=true});
+  const tab=document.getElementById("side-tab"),drawer=document.getElementById("drawer"),bg=document.getElementById("drawer-bg");
+  const openD=()=>{drawer.hidden=false;bg.hidden=false;document.getElementById("drawer-x").focus()};
+  const closeD=()=>{drawer.hidden=true;bg.hidden=true;tab.focus()};
+  tab.addEventListener("click",openD);bg.addEventListener("click",closeD);
+  document.getElementById("drawer-x").addEventListener("click",closeD);
+  addEventListener("keydown",e=>{if(e.key==="Escape"){if(!lb.hidden)lb.hidden=true;else if(!drawer.hidden)closeD()}});
+  const input=document.getElementById("ph-files"),drop=document.getElementById("drop"),queueEl=document.getElementById("queue");
+  const upBtn=document.getElementById("ph-upload"),status=document.getElementById("ph-status");
+  let queue=[];
+  function setStatus(msg,err){status.hidden=!msg;status.textContent=msg||"";status.classList.toggle("err",!!err)}
+  function addFiles(files){
+    for(const f of files){if(/^image\/(jpeg|png|webp)$/.test(f.type))queue.push(f)}
+    queueEl.replaceChildren(...queue.map(f=>{const i=document.createElement("img");i.src=URL.createObjectURL(f);i.alt=f.name;return i}));
+    upBtn.disabled=!queue.length;upBtn.textContent=queue.length?`Upload ${queue.length} photo${queue.length>1?"s":""}`:"Upload";setStatus("");
+  }
+  input.addEventListener("change",()=>{addFiles(input.files);input.value=""});
+  ["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("over")}));
+  ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove("over")}));
+  drop.addEventListener("drop",e=>addFiles(e.dataTransfer.files));
+  async function shrink(file){
+    try{const bmp=await createImageBitmap(file);const max=2400,s=Math.min(1,max/Math.max(bmp.width,bmp.height));
+      if(s===1&&file.size<4e6)return file;
+      const c=document.createElement("canvas");c.width=Math.round(bmp.width*s);c.height=Math.round(bmp.height*s);
+      c.getContext("2d").drawImage(bmp,0,0,c.width,c.height);
+      return await new Promise(r=>c.toBlob(b=>r(b||file),"image/jpeg",.85));
+    }catch(e){return file}
+  }
+  const MSG={too_large:"That photo is too large (20 MB max).",unsupported_type:"Use JPG, PNG or WebP photos.",quota_or_state:"Photo storage is full. Delete some old photos first.",rate_limited:"Too many uploads at once. Wait a moment and try again.",not_granted:"You don't have permission to upload photos here."};
+  upBtn.addEventListener("click",async()=>{
+    if(!assets||!db||!queue.length)return;upBtn.disabled=true;
+    const caption=document.getElementById("ph-caption").value.trim(),category=document.getElementById("ph-cat").value;
+    let done=0,failed=0,lastErr="";
+    for(const f of queue){
+      setStatus(`Uploading ${done+failed+1} of ${queue.length}…`);
+      try{const blob=await shrink(f);const r=await assets.upload(blob,{type:blob.type||"image/jpeg"});
+        await db.collection("photos").doc(r.id).set({assetId:r.id,caption,category,createdAt:Date.now()});done++}
+      catch(e){failed++;lastErr=MSG[e&&e.code]||"Upload failed. Check your connection and try again."}
+    }
+    queue=[];queueEl.replaceChildren();upBtn.textContent="Upload";document.getElementById("ph-caption").value="";
+    setStatus(failed?`${done} uploaded, ${failed} failed. ${lastErr}`:`Uploaded ${done} photo${done>1?"s":""}. They're now in the gallery.`,!!failed);
+  });
+  // On a normal web host (e.g. GitHub Pages) photos come from gallery/photos.json
+  function loadStatic(){
+    fetch("gallery/photos.json",{cache:"no-store"}).then(r=>r.ok?r.json():[]).then(list=>{
+      if(!Array.isArray(list)||!list.length)return;
+      photos=list.filter(p=>p&&p.file).map((p,i)=>({id:"s"+i,src:"gallery/"+p.file,caption:p.caption||"",category:p.category||"completed",createdAt:p.date||Date.now()}))
+        .sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt));render();
+    }).catch(()=>{});
+  }
+  (async()=>{
+    if(!window.claude||!claude.use){loadStatic();return}
+    const [d,a,u]=await Promise.all([claude.use("db"),claude.use("assets"),claude.use("user")]);
+    db=d;assets=a;canDelete=!!(a&&u&&u.canEdit&&u.canEdit());
+    if(a){tab.hidden=false;setEmpty("Site photos will appear here","Use the Upload photos tab on the right edge to add the first ones.")}
+    if(!db){loadStatic();return}
+    const timer=setTimeout(()=>{if(!photos.length)setEmpty("Photos can't be loaded right now","Try again in a little while.")},10000);
+    db.collection("photos").orderBy("createdAt","desc").limit(300).onSnapshot(snap=>{
+      if(!snap.metadata.fromCache)clearTimeout(timer);
+      photos=snap.docs.map(s=>({id:s.id,...s.data()}));render();
+    },()=>clearTimeout(timer));
+  })();
+})();
+document.fonts&&document.fonts.ready.then(()=>window._onScroll&&window._onScroll());
+</script>
+
+</body>
+</html>
