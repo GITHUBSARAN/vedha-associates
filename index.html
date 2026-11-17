@@ -488,8 +488,8 @@ footer{background:var(--dark);color:var(--on-dark-muted);padding-block:64px 28px
 
 <div class="ticker" aria-label="What we offer">
   <div class="ticker-track">
-    <ul><li>Multi-storied buildings</li><li>Duplex houses</li><li>Villas with amenities</li><li>Free site visit</li><li>Itemised BOQ quote</li><li>Stage-wise payment</li><li>Plan approval support</li><li>Turnkey handover</li></ul>
-    <ul aria-hidden="true"><li>Multi-storied buildings</li><li>Duplex houses</li><li>Villas with amenities</li><li>Free site visit</li><li>Itemised BOQ quote</li><li>Stage-wise payment</li><li>Plan approval support</li><li>Turnkey handover</li></ul>
+    <ul><li>Multi-storied buildings</li><li>Duplex houses</li><li>Villas with amenities</li><li>₹2,500 – ₹3,000 per sq.ft</li><li>Free site visit</li><li>Itemised BOQ quote</li><li>Stage-wise payment</li><li>Plan approval support</li><li>Turnkey handover</li></ul>
+    <ul aria-hidden="true"><li>Multi-storied buildings</li><li>Duplex houses</li><li>Villas with amenities</li><li>₹2,500 – ₹3,000 per sq.ft</li><li>Free site visit</li><li>Itemised BOQ quote</li><li>Stage-wise payment</li><li>Plan approval support</li><li>Turnkey handover</li></ul>
   </div>
 </div>
 
@@ -631,16 +631,15 @@ footer{background:var(--dark);color:var(--on-dark-muted);padding-block:64px 28px
   <div class="wrap">
     <div class="sec-head rv">
       <div><span class="mono tag">Rough cost estimator</span><h2>What will my home <i>cost?</i></h2></div>
-      <p>A first number for planning. Rates are indicative per square foot of built-up area. After the free site visit we give you a fixed, itemised quote.</p>
+      <p>Our rate is <b>₹2,500 to ₹3,000 per sq.ft</b> of built-up area, depending on the construction design. Pick a design and area for a first figure. After the free site visit we give you a fixed, itemised quote.</p>
     </div>
     <div class="estimator rv">
       <div class="est-in">
         <div class="field">
-          <span class="lbl" id="kind-l">Type of work</span>
+          <span class="lbl" id="kind-l">Construction design</span>
           <div class="seg" role="radiogroup" aria-labelledby="kind-l">
-            <input type="radio" name="kind" id="k-struct" value="structure"><label for="k-struct">Structure only</label>
-            <input type="radio" name="kind" id="k-std" value="standard" checked><label for="k-std">Turnkey · Standard</label>
-            <input type="radio" name="kind" id="k-prem" value="premium"><label for="k-prem">Turnkey · Premium</label>
+            <input type="radio" name="kind" id="k-std" value="standard" checked><label for="k-std">Standard design · ₹2,500/sq.ft</label>
+            <input type="radio" name="kind" id="k-prem" value="premium"><label for="k-prem">Premium design · ₹3,000/sq.ft</label>
           </div>
         </div>
         <div class="field">
@@ -660,9 +659,10 @@ footer{background:var(--dark);color:var(--on-dark-muted);padding-block:64px 28px
         <span class="mono">Indicative project cost</span>
         <div class="big" id="total">₹ 0</div>
         <span class="mono" id="rate">@ ₹ 0 / sq.ft</span>
+        <span class="mono" id="range" style="color:var(--gold-2)!important"></span>
         <div class="bars" id="split"></div>
         <a class="btn gold" id="est-wa" href="#" target="_blank" rel="noopener">Send this estimate on WhatsApp</a>
-        <p class="note">Sample rates for planning only. Final cost depends on soil, design, materials and site access.</p>
+        <p class="note">Vedha Associates rate: ₹2,500 – ₹3,000 per sq.ft depending on construction design. The final figure is confirmed in the itemised quote after the site visit.</p>
       </div>
     </div>
   </div>
@@ -711,7 +711,7 @@ footer{background:var(--dark);color:var(--on-dark-muted);padding-block:64px 28px
       <p>Don't see your question? Call or WhatsApp Manivasagan on +91 73390 00678.</p>
     </aside>
     <div class="faq-list rv">
-      <details open><summary>How much does it cost to build a house in Chidambaram?</summary><p>It depends on the type of work and finishes. Use the estimator above for a first figure. After the free site visit we give you an itemised BOQ listing every quantity, rate and brand, so you can compare it line by line.</p></details>
+      <details open><summary>How much does it cost to build a house in Chidambaram?</summary><p>Our rate is ₹2,500 to ₹3,000 per sq.ft of built-up area, depending on the construction design. For example, a 1,800 sq.ft duplex costs about ₹45 lakh to ₹54 lakh. Use the estimator above for your own area. After the free site visit we give you an itemised BOQ listing every quantity, rate and brand, so you can compare it line by line.</p></details>
       <details><summary>Can I see my home in 3D before construction?</summary><p>Yes. After the site visit and plan, we prepare elevation drawings and a 3D view of your home so you can see it from every side before work starts.</p></details>
       <details><summary>How long does a duplex house take?</summary><p>A typical G+1 duplex of 1,800–3,000 sq.ft takes about 8 to 12 months from foundation to handover, depending on design, finishes and approvals.</p></details>
       <details><summary>Do you help with plan approval?</summary><p>Yes. We prepare the floor plans, elevations and structural drawings and help you with local body plan approval and utility connections.</p></details>
@@ -1020,12 +1020,12 @@ timelineFill();
 })();
 
 /* ---------- Estimator ---------- */
-const RATES={structure:1250,standard:2100,premium:2850}; // sample rates per sq.ft (edit to your real rates)
-const FLOOR_ADJ={1:1.06,2:1,3:.98,4:.97,5:.97};
+const RATES={standard:2500,premium:3000}; // Vedha Associates rates per sq.ft (given by owner, Nov 2026)
+const FLOOR_ADJ={1:1,2:1,3:1,4:1,5:1};
 const SPLIT={structure:[["Foundation & plinth",.24],["Columns, beams, slabs",.46],["Brickwork",.18],["Labour & supervision",.12]],
   standard:[["Structure (RCC + masonry)",.48],["Plastering & flooring",.17],["Plumbing & electrical",.14],["Doors, windows, painting",.15],["Supervision",.06]],
   premium:[["Structure (RCC + masonry)",.40],["Plastering & flooring",.20],["Plumbing & electrical",.15],["Doors, windows, painting",.19],["Supervision",.06]]};
-const KIND_NAME={structure:"Structure only",standard:"Turnkey · Standard",premium:"Turnkey · Premium"};
+const KIND_NAME={standard:"Standard design (₹2,500/sq.ft)",premium:"Premium design (₹3,000/sq.ft)"};
 const inr=n=>"₹ "+Math.round(n).toLocaleString("en-IN");
 const area=document.getElementById("area"),areaR=document.getElementById("area-r"),floors=document.getElementById("floors");
 function calc(){
@@ -1033,12 +1033,13 @@ function calc(){
   const a=Math.max(0,+area.value||0),rate=RATES[kind]*FLOOR_ADJ[floors.value],total=a*rate;
   document.getElementById("total").textContent=inr(total);
   document.getElementById("rate").textContent="@ "+inr(rate)+" / sq.ft · "+a.toLocaleString("en-IN")+" sq.ft";
+  document.getElementById("range").textContent="Range for this area: "+inr(a*2500)+" – "+inr(a*3000);
   const box=document.getElementById("split");box.replaceChildren();
   SPLIT[kind].forEach(([k,p])=>{const r=document.createElement("div");r.className="bar";
     const l=document.createElement("span");l.textContent=k;const v=document.createElement("span");v.className="amt";v.textContent=inr(total*p);
     const tr=document.createElement("div");tr.className="track";const i=document.createElement("i");i.style.width=(p*100/.48)+"%";tr.appendChild(i);
     r.append(l,v,tr);box.appendChild(r)});
-  document.getElementById("est-wa").href=waLink(`Hello Manivasagan, I used the cost estimator on your website.\nType: ${KIND_NAME[kind]}\nArea: ${a.toLocaleString("en-IN")} sq.ft\nFloors: ${floors.options[floors.selectedIndex].text}\nEstimate: ${inr(total)}\nPlease share an exact quote.`);
+  document.getElementById("est-wa").href=waLink(`Hello Manivasagan, I used the cost estimator on your website.\nDesign: ${KIND_NAME[kind]}\nArea: ${a.toLocaleString("en-IN")} sq.ft\nFloors: ${floors.options[floors.selectedIndex].text}\nEstimate: ${inr(total)}\nPlease share an exact quote.`);
 }
 area.addEventListener("input",()=>{areaR.value=area.value;calc()});
 areaR.addEventListener("input",()=>{area.value=areaR.value;calc()});
